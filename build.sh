@@ -4,13 +4,14 @@ set -- $vars
 echo $1
 
 #Need Kernel tunning
-#ulimit -n 600000
-#ulimit -u 600000
-#net.ipv6.conf.eth0.proxy_ndp=1
-#net.ipv6.conf.all.proxy_ndp=1
-#net.ipv6.conf.default.forwarding=1
-#net.ipv6.conf.all.forwarding=1
-#net.ipv6.ip_nonlocal_bind = 1
+ulimit -n 600000
+ulimit -u 600000
+sysctl net.ipv6.conf.eth0.proxy_ndp=1
+sysctl net.ipv6.conf.all.proxy_ndp=1
+sysctl net.ipv6.conf.default.forwarding=1
+sysctl net.ipv6.conf.all.forwarding=1
+sysctl net.ipv6.ip_nonlocal_bind = 1
+sysctl -p
 #Generate ip.list
 
 array=( 1 2 3 4 5 6 7 8 9 0 a b c d e f )
@@ -51,7 +52,7 @@ setuid 65535
 flush
 auth strong
 users $USER:CL:$PASSWORD
-allow admin" >3proxy.cfg
+allow $USER" >3proxy.cfg
 
 port=$FIRSTPORT
 count=1

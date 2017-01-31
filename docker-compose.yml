@@ -3,10 +3,10 @@ ipv6-proxy:
   cap_add:
     - NET_ADMIN
   volumes:
-   - /vmsssd/3proxy/3proxy.cfg:/root/3proxy/3proxy.cfg
-   - /vmsssd/3proxy/ndppd.conf:/root/ndppd/ndppd.conf
-   - /vmsssd/3proxy/init.sh:/init.sh
+   - /home/projects/seo/proxy/ipv6-proxy/3proxy.cfg:/root/3proxy/3proxy.cfg
+   - /home/projects/seo/proxy/ipv6-proxy/ndppd.conf:/root/ndppd/ndppd.conf
+   - /home/projects/seo/proxy/ipv6-proxy/init.sh:/init.sh
   ports:
-   - 30000-31000:30000-31000
+   - 30000-30100:30000-30100
   tty: true
 
