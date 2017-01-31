@@ -8,6 +8,7 @@ Configuration edit container.cfg
 - FIRSTPORT=30000 -Start port listen proxy
 - USER=tetrag - username auth proxy
 - PASSWORD=mysuperpass - password
+
 Build Docker image
 ============
 - docker build -t ipv6proxy .
