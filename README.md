@@ -1,6 +1,6 @@
 Multi port&ip ipv6 proxy with user auth
 ============
-Configuration edit container.cfg
+Edit container.cfg
 ============
 - MAXCOUNT=2 - Count ipv6 addresses
 - NETWORK=2a08:14c0:200:200 - ipv6 network
@@ -11,8 +11,12 @@ Configuration edit container.cfg
 
 Build Docker image
 ============
-- docker build -t ipv6proxy .
+- docker build -t ipv6-proxy .
 
 Build configuration files
 ============
 - ./build.sh
+
+Start with docker-compose
+============
+docker-compose up -d
