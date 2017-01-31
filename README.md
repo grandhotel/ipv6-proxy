@@ -11,11 +11,19 @@ Edit container.cfg
 
 Build Docker image
 ============
-- docker build -t ipv6-proxy .
+- docker build -t tetrag/ipv6-proxy .
 
 Build configuration files
 ============
 - ./build.sh
+
+Edit path volumes docker-compose.yml
+============
+  volumes:
+   - /vmsssd/3proxy/3proxy.cfg:/root/3proxy/3proxy.cfg
+   - /vmsssd/3proxy/ndppd.conf:/root/ndppd/ndppd.conf
+   - /vmsssd/3proxy/init.sh:/init.sh
+
 
 Start with docker-compose
 ============
