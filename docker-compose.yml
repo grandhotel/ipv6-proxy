@@ -1,0 +1,12 @@
+3proxy:
+  image: tetrag/3proxy:latest
+  cap_add:
+    - NET_ADMIN
+  volumes:
+   - /vmsssd/3proxy/3proxy.cfg:/root/3proxy/3proxy.cfg
+   - /vmsssd/3proxy/ndppd.conf:/root/ndppd/ndppd.conf
+   - /vmsssd/3proxy/init.sh:/init.sh
+  ports:
+   - 30000:30000
+  tty: true
+
