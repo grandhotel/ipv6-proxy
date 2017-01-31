@@ -1,5 +1,5 @@
-3proxy:
-  image: tetrag/3proxy:latest
+ipv6-proxy:
+  image: tetrag/ipv6-proxy
   cap_add:
     - NET_ADMIN
   volumes:

@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 vars=$(<container.cfg)
 set -- $vars
 echo $1
