@@ -7,6 +7,6 @@ ipv6-proxy:
    - /vmsssd/3proxy/ndppd.conf:/root/ndppd/ndppd.conf
    - /vmsssd/3proxy/init.sh:/init.sh
   ports:
-   - 30000:30000
+   - 30000-31000:30000-31000
   tty: true
 
