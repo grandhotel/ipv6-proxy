@@ -7,6 +7,6 @@ ipv6-proxy:
    - /home/projects/seo/proxy/ipv6-proxy/ndppd.conf:/root/ndppd/ndppd.conf
    - /home/projects/seo/proxy/ipv6-proxy/init.sh:/init.sh
   ports:
-   - 30000-30100:30000-30100
+   - 30000-40000:30000-40000
   tty: true
 
