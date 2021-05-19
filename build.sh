@@ -6,7 +6,7 @@ echo $1
 #Need Kernel tunning
 ulimit -n 600000
 ulimit -u 600000
-sysctl net.ipv6.conf.eth0.proxy_ndp=1
+sysctl net.ipv6.conf.ens3.proxy_ndp=1
 sysctl net.ipv6.conf.all.proxy_ndp=1
 sysctl net.ipv6.conf.default.forwarding=1
 sysctl net.ipv6.conf.all.forwarding=1
@@ -68,7 +68,7 @@ done
 #Generate ndppd.conf
 echo \
 "route-ttl 30000
-proxy eth0 {
+proxy ens3 {
    router no
    timeout 500   
    ttl 30000
@@ -80,7 +80,7 @@ proxy eth0 {
 #Generate init.sh
 echo \
 "#!/bin/bash
-/sbin/ip -6 addr add $NETWORK::2/64 dev eth0
+/sbin/ip -6 addr add $NETWORK::2/64 dev ens3
 /sbin/ip -6 route add default via $NETWORK::1
 /sbin/ip -6 route add local $NETWORK::/64 dev lo
 /root/3proxy/src/3proxy /root/3proxy/3proxy.cfg
