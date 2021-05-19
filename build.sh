@@ -83,6 +83,6 @@ echo \
 /sbin/ip -6 addr add $NETWORK::2/64 dev ens3
 /sbin/ip -6 route add default via $NETWORK::1
 /sbin/ip -6 route add local $NETWORK::/64 dev lo
-/root/3proxy/src/3proxy /root/3proxy/3proxy.cfg
-/root/ndppd/ndppd -c /root/ndppd/ndppd.conf
+/usr/bin/3proxy /root/ipv6-proxy/3proxy.cfg
+/root/ndppd/ndppd -c /root/ipv6-proxy/ndppd.conf
 exit 0" >init.sh
