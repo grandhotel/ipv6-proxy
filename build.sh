@@ -10,7 +10,7 @@ sysctl net.ipv6.conf.ens3.proxy_ndp=1
 sysctl net.ipv6.conf.all.proxy_ndp=1
 sysctl net.ipv6.conf.default.forwarding=1
 sysctl net.ipv6.conf.all.forwarding=1
-sysctl net.ipv6.ip_nonlocal_bind = 1
+sysctl net.ipv6.ip_nonlocal_bind=1
 sysctl -p
 #Generate ip.list
 
